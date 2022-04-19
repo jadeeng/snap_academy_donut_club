@@ -4,11 +4,26 @@
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 16%);
 }
+.center {
+  text-align: center;
+  padding: 10px;
+}
 body {
   margin: 0;
   font-family: "Cabin", sans-serif;
   color: #d4cad2;
   background-color: rgb(0, 0, 0);
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: rgb(36, 34, 36);
 }
 .logo {
   margin: 0;
@@ -207,7 +222,7 @@ body {
   padding: 0;
 }
 .main__container {
-  display: frig;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-self: center;
