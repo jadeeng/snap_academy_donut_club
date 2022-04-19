@@ -25,6 +25,12 @@ body {
   vertical-align: baseline;
   background: rgb(36, 34, 36);
 }
+.container {
+  box-sizing: inherit;
+  margin: 0 auto;
+  align-items: flex-start;
+  max-width: var(--max-container);
+}
 .logo {
   margin: 0;
   font-family: "Cabin", sans-serif;
@@ -222,7 +228,7 @@ body {
   padding: 0;
 }
 .main__container {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-self: center;
@@ -236,6 +242,26 @@ body {
 }
 
 .main__content h1 {
-  font-size: 4re;
-  background-color: #ff8177;
+  font-size: 4rem;
+}
+
+.main__content h2 {
+  font-size: 3rem;
+}
+div.polaroid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+  display: block;
 }
