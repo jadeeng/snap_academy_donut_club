@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+
 :root {
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 16%);
@@ -16,6 +18,13 @@ body {
   background: var(--clr-bg);
   color: var(--clr-neon);
   padding-right: 10rem;
+  margin: 0;
+  font-family: Roboto;
+  color: #d4cad2;
+  background-color: rgb(32, 27, 31);
+  -webkit-tap-highlight-color: transparent;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .neon-button {
@@ -26,7 +35,7 @@ body {
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 0.125em solid;
-  padding: 0.25em 1em;
+  padding: 0.5em;
   border-radius: 0.25em;
 
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
@@ -87,17 +96,19 @@ body {
 
 .navbar {
   background: #131313;
+  overflow: hidden;
   height: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 .navbar__container {
-  display: flex;
+  display: block;
+  overflow: hidden;
   justify-content: space-between;
   height: 80px;
   z-index: 1;
@@ -153,13 +164,13 @@ body {
   background: #4837ff;
   transition: all 0.3s ease;
 }
-/* changes navbar to fit screen size on mobile or 
-screens smaller than 900px*/
+
 .navbar__links:hover {
   color: #f77062;
   transition: all 0.3s ease;
 }
-
+/* changes navbar to fit screen size on mobile or 
+screens smaller than 900px*/
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
@@ -201,4 +212,93 @@ screens smaller than 900px*/
     transition: all 0.3s ease-in-out;
     background: #ffff;
   }
+}
+
+/* menu.html styling*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.main__container {
+  display: frig;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main__content h1 {
+  font-size: 4re;
+  background-color: #ff8177;
 }
