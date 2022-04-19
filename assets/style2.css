@@ -40,6 +40,9 @@ body {
 
 .topnav {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: rgb(36, 34, 36);
   padding: 0, auto;
 }
@@ -60,8 +63,8 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04aa6d;
-  color: white;
+  background-color: var(--clr-neon);
+  color: var(--clr-neon);
 }
 
 .topnav .icon {
@@ -105,7 +108,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
+  background-color: var(--clr-neon);
   transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
   filter: blur(1em);
   opacity: 0.7;
@@ -225,20 +228,22 @@ body {
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+}
+.main {
+  margin-top: 50px;
 }
 .main__container {
   display: block;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-self: center;
-  margin: 0 auto;
+  margin: 50px auto;
+  padding: 1.5em;
   height: 90vh;
-  background-color: #141414;
+  background-color: rgb(0, 0, 0);
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
+  max-width: 100%;
 }
 
 .main__content h1 {
@@ -264,4 +269,92 @@ div.container {
   text-align: center;
   padding: 10px 20px;
   display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.main__container {
+  display: frig;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main__content h1 {
+  font-size: 4re;
+  background-color: #ff8177;
 }
